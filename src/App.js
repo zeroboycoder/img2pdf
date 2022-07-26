@@ -2,16 +2,16 @@ import './App.css';
 import React from 'react';
 import { PageSizes, PDFDocument, degrees } from 'pdf-lib'
 import EXIF from 'exif-js';
-// import { polyfill } from "mobile-drag-drop";
+import { polyfill } from "mobile-drag-drop";
 
 // optional import of scroll behaviour
-// import { scrollBehaviourDragImageTranslateOverride } from "mobile-drag-drop/scroll-behaviour";
+import { scrollBehaviourDragImageTranslateOverride } from "mobile-drag-drop/scroll-behaviour";
 
 // options are optional ;)
-// polyfill({
-//   // use this to make use of the scroll behaviour
-//   dragImageTranslateOverride: scrollBehaviourDragImageTranslateOverride
-// });
+polyfill({
+  // use this to make use of the scroll behaviour
+  dragImageTranslateOverride: scrollBehaviourDragImageTranslateOverride
+});
 
 window.addEventListener('touchmove', function () { });
 
